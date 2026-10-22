@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENVIVONEWS - Noticias en Vivo y Actualidad</title>
+    <style>
+        :root {
+            --primary-color: #003366;
+            --secondary-color: #d9534f;
+            --bg-color: #f8f9fa;
+            --text-color: #2b2b2b;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Top Bar & Header */
+        .top-bar {
+            background-color: #001f3f;
+            color: #fff;
+            font-size: 14px;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 5%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #002244;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Main Banner News */
+        .main-news {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .main-news-content {
+            padding: 25px;
+        }
+
+        .badge {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .main-news h2 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: var(--primary-color);
+        }
+
+        /* Grid News */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        /* Sidebar & Documents */
+        .sidebar {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .doc-list {
+            list-style: none;
+        }
+
+        .doc-list li {
+            margin-bottom: 12px;
+        }
+
+        .doc-list a {
+            display: block;
+            padding: 10px 15px;
+            background: #eef4f8;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .doc-list a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>Últimas noticias en tiempo real</span>
+        <span>ENVIVONEWS | Edición Global</span>
+    </div>
+
+    <header>
+        <h1>ENVIVONEWS</h1>
+        <p>Tu portal de noticias de confianza y actualidad mundial</p>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Nacional</a>
+        <a href="#">Internacional</a>
+        <a href="#">Economía</a>
+        <a href="#">Deportes</a>
+        <a href="#">Tecnología</a>
+    </nav>
+
+    <div class="container">
+        <!-- News Section -->
+        <main>
+            <div class="main-news">
+                <div class="main-news-content">
+                    <span class="badge">Última Hora</span>
+                    <h2>Bienvenidos a ENVIVONEWS: Cobertura Informativa Completa</h2>
+                    <p>Nos complace presentar nuestro nuevo portal digital. Aquí encontrará los análisis más detallados, noticias de actualidad y reportes exclusivos actualizados las 24 horas del día.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-bottom: 15px; color: var(--primary-color);">Noticias Destacadas</h3>
+            <div class="news-grid">
+                <div class="card">
+                    <span class="badge" style="background-color: #28a745;">Economía</span>
+                    <h3>Mercados globales muestran tendencias de crecimiento</h3>
+                    <p>Análisis de los indicadores económicos más importantes de la semana.</p>
+                </div>
+                <div class="card">
+                    <span class="badge" style="background-color: #17a2b8;">Tecnología</span>
+                    <h3>Avances e innovaciones digitales para este año</h3>
+                    <p>Descubra cómo las nuevas herramientas están transformando la web.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar / Direct Links Section -->
+        <aside class="sidebar">
+            <h3>Documentos y Servicios</h3>
+            <p style="font-size: 14px; margin-bottom: 15px;">Acceda directamente a nuestros archivos oficiales y listas de servicios en formato PDF o HTML:</p>
+            
+            <ul class="doc-list">
+                <li>
+                    <a href="Hello-sir-this-is-my-service-list.pdf" target="_blank">📄 Lista de Servicios (PDF)</a>
+                </li>
+                <li>
+                    <a href="service-details.html" target="_blank">🌐 Detalle de Servicios (HTML)</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ENVIVONEWS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
